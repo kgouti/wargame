@@ -14,7 +14,10 @@ play = {'player0': ('3S', '3'), 'player1': ('8C', '8')}
 # print(play.get(player1)[1])
 # print(play.get(player2)[1])
 # print(list(play.keys())[0])
-
+import logging as log
+# l = log.getLoggerClass()
+log.basicConfig(level=log.INFO)
+log.info("hello")
 # ite = 1
 # print(ite)
 # ite = ite + 1
@@ -22,14 +25,18 @@ play = {'player0': ('3S', '3'), 'player1': ('8C', '8')}
 card_code = ('QUEEN', 'ACE')
 court_cards = {"JOKER": 500, "ACE": 400, "KING": 300, "QUEEN": 200, "JACK": 100}
 # print(card_code[0])
-for j in court_cards:
-    print(j)
-    if j in card_code:
-        print(j,"-", court_cards.get(j))
-for cards in card_code:
-    print(cards)
-for cards in court_cards:
-    print(cards)
+for j in card_code:
+    for k in court_cards:
+       if j == k:
+           print("e",j, court_cards.get(k))
+# for j in court_cards:
+#     print(j)
+#     if j in card_code:
+#         print(j,"-", court_cards.get(j))
+# for cards in card_code:
+#     print(cards)
+# for cards in court_cards:
+#     print(cards)
 # player_1_value = court_cards.get(card_code[0])
 # player_2_value = court_cards.get(card_code[1])
 
