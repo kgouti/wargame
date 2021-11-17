@@ -24,7 +24,7 @@ API documentation can be found here: https://deckofcardsapi.com/
 
 Game rules can be found here: https://bicyclecards.com/how-to-play/war/#filter
 
-###### **Approach for testing**
+#### **Approach for testing**
 Game Journey
 
 a) Create a new deck using https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1
