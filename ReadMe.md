@@ -39,7 +39,7 @@ e) Repeat (c), (d) twice as there are two players
 
 f) Draw a card from each players pile using https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/draw/?count=1
 
-g) Add these two cards to a new pile called `playing_pile`
+g) Add these two cards to a new pile called `playing_pile` ( this is a TODO item )
 
 h) For each drawn card from the players piles:
 
@@ -48,7 +48,7 @@ h) For each drawn card from the players piles:
         b1) Add both cards to the respective player pile whose card value is higher
         b2) Continue playing
         b3) If both cards have same value:
-            b3.1) Draw 1 cards from each players piles and add to `playing_pile`. Do not Compare this.
+            b3.1) Draw 1 cards from each players piles and add to `playing_pile`. Do not Compare this. (TODO)
             b3.2) Draw 1 card from each player and compare.
                 b3.2.1) Add all cards from the `playing_pile` to players pile whose card value is higher.
                 b3.2.2) Continue playing

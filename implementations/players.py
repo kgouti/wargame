@@ -82,7 +82,7 @@ class Players(API):
                 player1_card_code = drawn_player_cards.get(list(self.no_of_players.values())[0])[1]
                 player2_card_code = drawn_player_cards.get(list(self.no_of_players.values())[1])[1]
 
-        log.info("Player1 Code: {} - Player2 Code: {}".format(player1_card_code,player2_card_code))
+        log.info("Player1 Code: {} - Player2 Code: {}".format(player1_card_code, player2_card_code))
         card_list = (player1_card_value, player2_card_value)
 
         # compare cards and add cards to winning player pile
@@ -118,6 +118,9 @@ class Players(API):
             log.info("drawing card for player: {}".format(player))
             player_url = "https://deckofcardsapi.com/api/deck/" + deck_id + "/pile/" + player + "/draw/"
             player_response = self.api_post(base_url=player_url, data=player_draw_count)
+
+            # TODO: Add the drawn to a separate pile
+
             # log.info("player_response: {}".format(player_response))
             if 'cards' in player_response:
                 card_code = player_response.get('cards')[0].get('code')
